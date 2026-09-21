@@ -192,6 +192,12 @@ uvicorn app.main:app --reload
 docker compose up --build      # UI on :8501, API on :8000
 ```
 
+## Good to go docker image of this repo at
+
+```bash
+https://hub.docker.com/repository/docker/warriormanx/codebasegpt/general
+```
+
 ## Limits & notes
 
 * Defaults: 2000 files, 8000 chunks, 300 KB per file (see `.env.example`); shallow files are indexed first.
