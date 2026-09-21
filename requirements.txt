@@ -1,0 +1,19 @@
+# --- core ---
+pymongo>=4.7
+numpy>=1.26
+python-dotenv>=1.0
+rank-bm25>=0.2.2
+
+# --- embeddings / reranking (pulls in torch) ---
+sentence-transformers>=3.0
+
+# --- LLM ---
+groq>=0.9
+
+# --- agent orchestration ---
+langgraph>=0.2
+
+# --- UI + API ---
+streamlit>=1.40
+fastapi>=0.110
+uvicorn[standard]>=0.29

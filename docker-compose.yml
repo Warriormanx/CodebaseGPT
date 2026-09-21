@@ -1,0 +1,21 @@
+services:
+  ui:
+    build: .
+    ports: ["8501:8501"]
+    env_file: .env
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports: ["8000:8000"]
+    env_file: .env
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+  # Optional local MongoDB (no Atlas Vector Search -> exact local cosine fallback).
+  # Use with MONGODB_URI=mongodb://mongo:27017
+  # mongo:
+  #   image: mongo:7
+  #   ports: ["27017:27017"]
+volumes:
+  hf_cache:
