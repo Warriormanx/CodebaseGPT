@@ -200,7 +200,7 @@ https://hub.docker.com/repository/docker/warriormanx/codebasegpt/general
 
 ## Limits & notes
 
-* Defaults: 2000 files, 8000 chunks, 300 KB per file (see `.env.example`); shallow files are indexed first.
+* Defaults: 2000 files, 8000 chunks, 300 KB per file; shallow files are indexed first.
 * Ingesting a repo again replaces its previous index.
 * Private repos: set `GITHUB_TOKEN` (or use the sidebar field).
 * Local vector fallback loads a repo's embeddings into memory — fine for typical repos, use Atlas for very large ones.
